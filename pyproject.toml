@@ -1,0 +1,32 @@
+[project]
+name = "task-manager"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aiosqlite>=0.21.0",
+    "asyncio>=3.4.3",
+    "asyncpg>=0.30.0",
+    "celery[redis]>=5.5.2",
+    "fastapi-limiter>=0.1.6",
+    "fastapi[standard]>=0.115.12",
+    "greenlet>=3.2.2",
+    "httpx>=0.28.1",
+    "loguru>=0.7.3",
+    "passlib>=1.7.4",
+    "pyjwt>=2.10.1",
+    "pytest-asyncio>=1.0.0",
+    "pytest-cov>=6.1.1",
+    "sqlmodel>=0.0.24",
+    "uuid7>=0.1.0",
+    "uvicorn[standard]>=0.34.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
