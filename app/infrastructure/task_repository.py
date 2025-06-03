@@ -51,7 +51,7 @@ class SQLModelTaskRepository:
         if due_date:
             task.due_date = due_date
 
-        if completed:
+        if completed is not None:
             task.completed = completed
 
         if user_id:

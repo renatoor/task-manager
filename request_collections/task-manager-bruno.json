@@ -1,0 +1,351 @@
+{
+  "name": "task-manager",
+  "version": "1",
+  "items": [
+    {
+      "type": "folder",
+      "name": "users",
+      "filename": "users",
+      "root": {
+        "meta": {
+          "name": "users"
+        }
+      },
+      "items": [
+        {
+          "type": "http",
+          "name": "sign-up",
+          "filename": "sign-up.bru",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:8000/api/v1/users/sign-up",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"name\": \"Renato Rodrigues\",\n  \"email\": \"renato@email.com\",\n  \"password\": \"123456\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NTgxNDcwfQ.lg4Dy1hIkOoerwFO5aD9JXN_8rpd9Bo44UFk39IOOis"
+              }
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "me",
+          "filename": "me.bru",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:8000/api/v1/users/me",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjQzMzE2fQ.EIJu3qE0D-sLBnbSw6ImQX1KuiJEy_MBk8ytETTkiuY"
+              }
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "users",
+          "filename": "users.bru",
+          "seq": 3,
+          "request": {
+            "url": "http://localhost:8000/api/v1/users",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjQzMzE2fQ.EIJu3qE0D-sLBnbSw6ImQX1KuiJEy_MBk8ytETTkiuY"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "tasks",
+      "filename": "tasks",
+      "root": {
+        "meta": {
+          "name": "tasks"
+        }
+      },
+      "items": [
+        {
+          "type": "http",
+          "name": "create task",
+          "filename": "create task.bru",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:8000/api/v1/tasks",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"title\": \"Nova tarefa\",\n  \"description\": \"Minha nova tarefa\",\n  \"due_date\": \"2030-01-01 00:00:00\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjQzMzE2fQ.EIJu3qE0D-sLBnbSw6ImQX1KuiJEy_MBk8ytETTkiuY"
+              }
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "get tasks",
+          "filename": "get tasks.bru",
+          "seq": 2,
+          "request": {
+            "url": "http://localhost:8000/api/v1/tasks?completed=false&due_date=2032-01-01T00:00:00",
+            "method": "GET",
+            "headers": [],
+            "params": [
+              {
+                "name": "completed",
+                "value": "false",
+                "type": "query",
+                "enabled": true
+              },
+              {
+                "name": "due_date",
+                "value": "2032-01-01T00:00:00",
+                "type": "query",
+                "enabled": true
+              }
+            ],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjQzMzE2fQ.EIJu3qE0D-sLBnbSw6ImQX1KuiJEy_MBk8ytETTkiuY"
+              }
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "patch task",
+          "filename": "patch task.bru",
+          "seq": 3,
+          "request": {
+            "url": "http://localhost:8000/api/v1/tasks/0683a19d-2fd2-7c59-8000-33977ae4bb7b",
+            "method": "PATCH",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"title\": \"Novo titulo 7\",\n  \"description\": \"Tarefa atualizada\",\n  \"due_date\": \"2025-01-01T00:00:00\",\n  \"completed\": false\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjQzMzE2fQ.EIJu3qE0D-sLBnbSw6ImQX1KuiJEy_MBk8ytETTkiuY"
+              }
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "delete task",
+          "filename": "delete task.bru",
+          "seq": 4,
+          "request": {
+            "url": "http://localhost:8000/api/v1/tasks/0683a19d-2fd2-7c59-8000-33977ae4bb7b",
+            "method": "DELETE",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "json": "{\n  \"title\": \"Novo titulo 4\",\n  \"description\": \"Tarefa atualizada\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjQzMzE2fQ.EIJu3qE0D-sLBnbSw6ImQX1KuiJEy_MBk8ytETTkiuY"
+              }
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "get task",
+          "filename": "get task.bru",
+          "seq": 5,
+          "request": {
+            "url": "http://localhost:8000/api/v1/tasks/0683a19d-2fd2-7c59-8000-33977ae4bb7b",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "bearer",
+              "bearer": {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjM5OTM1fQ.qw-Uk99TgBGOkpM3r93-RvPeultBwLmGOGFpUotX0Mg"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "auth",
+      "filename": "auth",
+      "root": {
+        "meta": {
+          "name": "auth"
+        }
+      },
+      "items": [
+        {
+          "type": "http",
+          "name": "token",
+          "filename": "token.bru",
+          "seq": 1,
+          "request": {
+            "url": "http://localhost:8000/api/v1/auth/token",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "formUrlEncoded",
+              "formUrlEncoded": [
+                {
+                  "name": "username",
+                  "value": "renato@email.com",
+                  "enabled": true
+                },
+                {
+                  "name": "password",
+                  "value": "123456",
+                  "enabled": true
+                }
+              ],
+              "multipartForm": [
+                {
+                  "type": "text",
+                  "name": "username",
+                  "value": "renato@email.com",
+                  "enabled": true
+                },
+                {
+                  "type": "text",
+                  "name": "password",
+                  "value": "123456",
+                  "enabled": true
+                }
+              ],
+              "file": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "docs": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "task-manager",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ]
+  }
+}

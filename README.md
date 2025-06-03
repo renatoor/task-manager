@@ -34,7 +34,7 @@ A **FastAPI** application leveraging **PostgreSQL** (with **SQLite** for testing
 - [fastapi-limiter](https://github.com/long2ice/fastapi-limiter)
 - [Celery](https://docs.celeryproject.org/)
 - [Docker Compose](https://docs.docker.com/compose/)
-- [uv](https://python-poetry.org/) for dependency management
+- [uv](https://docs.astral.sh/uv/) for dependency management
 
 ---
 

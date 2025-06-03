@@ -1,0 +1,361 @@
+{
+  "info": {
+    "name": "task-manager",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "bruno",
+      "event": []
+    },
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "sign-up",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NTgxNDcwfQ.lg4Dy1hIkOoerwFO5aD9JXN_8rpd9Bo44UFk39IOOis",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/users/sign-up",
+              "protocol": "http",
+              "host": [
+                "localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "sign-up"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Renato Rodrigues\",\n  \"email\": \"renato@email.com\",\n  \"password\": \"123456\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "me",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjQzMzE2fQ.EIJu3qE0D-sLBnbSw6ImQX1KuiJEy_MBk8ytETTkiuY",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/users/me",
+              "protocol": "http",
+              "host": [
+                "localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "me"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "users",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjQzMzE2fQ.EIJu3qE0D-sLBnbSw6ImQX1KuiJEy_MBk8ytETTkiuY",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/users",
+              "protocol": "http",
+              "host": [
+                "localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "tasks",
+      "item": [
+        {
+          "name": "create task",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjQzMzE2fQ.EIJu3qE0D-sLBnbSw6ImQX1KuiJEy_MBk8ytETTkiuY",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/tasks",
+              "protocol": "http",
+              "host": [
+                "localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tasks"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Nova tarefa\",\n  \"description\": \"Minha nova tarefa\",\n  \"due_date\": \"2030-01-01 00:00:00\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "get tasks",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjQzMzE2fQ.EIJu3qE0D-sLBnbSw6ImQX1KuiJEy_MBk8ytETTkiuY",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/tasks?completed=false&due_date=2032-01-01T00:00:00",
+              "protocol": "http",
+              "host": [
+                "localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tasks"
+              ],
+              "query": [
+                {
+                  "key": "completed",
+                  "value": "false"
+                },
+                {
+                  "key": "due_date",
+                  "value": "2032-01-01T00:00:00"
+                }
+              ],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "patch task",
+          "event": [],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjQzMzE2fQ.EIJu3qE0D-sLBnbSw6ImQX1KuiJEy_MBk8ytETTkiuY",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/tasks/0683a19d-2fd2-7c59-8000-33977ae4bb7b",
+              "protocol": "http",
+              "host": [
+                "localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tasks",
+                "0683a19d-2fd2-7c59-8000-33977ae4bb7b"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Novo titulo 7\",\n  \"description\": \"Tarefa atualizada\",\n  \"due_date\": \"2025-01-01T00:00:00\",\n  \"completed\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "delete task",
+          "event": [],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjQzMzE2fQ.EIJu3qE0D-sLBnbSw6ImQX1KuiJEy_MBk8ytETTkiuY",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/tasks/0683a19d-2fd2-7c59-8000-33977ae4bb7b",
+              "protocol": "http",
+              "host": [
+                "localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tasks",
+                "0683a19d-2fd2-7c59-8000-33977ae4bb7b"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "get task",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "auth": {
+              "type": "bearer",
+              "bearer": {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZW5hdG9AZW1haWwuY29tIiwiZXhwIjoxNzQ4NjM5OTM1fQ.qw-Uk99TgBGOkpM3r93-RvPeultBwLmGOGFpUotX0Mg",
+                "type": "string"
+              }
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/tasks/0683a19d-2fd2-7c59-8000-33977ae4bb7b",
+              "protocol": "http",
+              "host": [
+                "localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tasks",
+                "0683a19d-2fd2-7c59-8000-33977ae4bb7b"
+              ],
+              "query": [],
+              "variable": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "token",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "auth": {
+              "type": "noauth"
+            },
+            "description": "",
+            "url": {
+              "raw": "http://localhost:8000/api/v1/auth/token",
+              "protocol": "http",
+              "host": [
+                "localhost:8000"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "token"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "renato@email.com",
+                  "disabled": false,
+                  "type": "default"
+                },
+                {
+                  "key": "password",
+                  "value": "123456",
+                  "disabled": false,
+                  "type": "default"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": []
+}
